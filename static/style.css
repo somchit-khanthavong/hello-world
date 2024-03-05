@@ -1,0 +1,14 @@
+body {
+    font-family: 'Noto Sans Lao', sans-serif;
+}
+    header a {
+        color: red;
+        text-decoration: none;
+    }
+    div h2 a {
+        text-decoration: none;
+        color: blue;
+    }
+    div h2 a:hover {
+        text-decoration: underline;
+    }
