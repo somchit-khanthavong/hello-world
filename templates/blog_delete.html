@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>ລົບໂພດ</h3>
+<form action="" method="post">{% csrf_token %}
+    <p>ເຈົ້າຕ້ອງທີ່ຈະລົບ {{ blogpost.title }} ແທ້ບໍ່?</p>
+    <input type="submit" value="ລົບ">
+</form>
+{% endblock content %}

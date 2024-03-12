@@ -3,5 +3,13 @@
     <div>
         <h2>{{ blogpost.title }}</h2>
         <p>{{ blogpost.content }}</p>
+        <!-- ປຸ່ມແກ້ໄຂໂພດ -->
+        <button>
+            <a href="{% url 'blog_edit' blogpost.pk %}">ແກ້ໄຂ</a>
+        </button>
+        <!-- ປຸ່ມລົບ -->
+        <button>
+            <a href="{% url 'blog_delete' blogpost.pk %}">ລົບ</a>
+        </button>
     </div>
 {% endblock content %}
