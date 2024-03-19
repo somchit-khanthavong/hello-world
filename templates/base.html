@@ -17,6 +17,26 @@
         <a href="{% url 'blog_add' %}">ເພີ່ມໂພດໃໝ່</a>    
     </header>
     
+    <!-- ປຸ່ມ Login ແລະ Logout-->
+    {% if user.is_authenticated %}
+        <p>ສະບາຍດີ {{ user.username }} !!</p>
+        <!-- ປຸ່ມ logout -->
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">ອອກຈາກລະບົບ</button>
+        </form>
+    {% else %}
+        <p>ທ່ານຍັງບໍ່ໄດ້ເຂົ້າສູ່ລະບົບ.</p>
+        <!-- ປຸ່ມ login -->
+        <button>
+            <a href="{% url 'login' %}">ເຂົ້າສູ່ລະບົບ</a>
+        </button>
+        <!-- ປຸ່ມ Sign up -->
+        <button>
+            <a href="{% url 'signup' %}">ລົງທະບຽນ</a>
+        </button>
+    {% endif %}
+
     {% block content %} 
     {% endblock content %}
 </body>

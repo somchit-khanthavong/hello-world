@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>ເຂົ້າສູ່ລະບົບ</h2>
+
+<form action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">ເຂົ້າສູ່ລະບົບ</button>
+</form>
+{% endblock content %}
